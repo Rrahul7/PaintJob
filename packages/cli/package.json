@@ -1,0 +1,26 @@
+{
+  "name": "@paintjob/cli",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "paintjob": "./bin/paintjob.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@paintjob/tokens": "*",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@paintjob/typescript-config": "*",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
+
