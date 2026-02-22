@@ -1,13 +1,37 @@
 {
   "name": "@paintjob/tokens",
   "version": "0.1.0",
+  "description": "Core token utilities, validators, and transformers for PaintJob design system",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Rrahul7/PaintJob.git",
+    "directory": "packages/tokens"
+  },
+  "keywords": [
+    "design-system",
+    "tokens",
+    "theme",
+    "colors",
+    "typography",
+    "paintjob"
+  ],
+  "author": "Rahul Dubey <rrahuldubey07@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "color": "^4.2.3",

@@ -1,16 +1,41 @@
 {
   "name": "@paintjob/ui",
   "version": "0.1.0",
+  "description": "Pre-built UI components for PaintJob design system",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Rrahul7/PaintJob.git",
+    "directory": "packages/ui"
+  },
+  "keywords": [
+    "design-system",
+    "ui",
+    "components",
+    "react",
+    "react-native",
+    "styled-components",
+    "paintjob"
+  ],
+  "author": "Rahul Dubey <rrahuldubey07@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@paintjob/core": "*",
+    "@paintjob/core": "^0.1.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -24,7 +49,8 @@
   },
   "peerDependencies": {
     "react": "^18.0.0",
-    "react-native": ">=0.72.0"
+    "react-native": ">=0.72.0",
+    "styled-components": "^6.0.0"
   }
 }
 

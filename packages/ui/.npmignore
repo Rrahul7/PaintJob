@@ -1,0 +1,10 @@
+src/
+tsconfig.json
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+.eslintrc.js
+.prettierrc
+node_modules/
+

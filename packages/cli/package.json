@@ -1,19 +1,43 @@
 {
   "name": "@paintjob/cli",
   "version": "0.1.0",
+  "description": "Command-line tool for PaintJob design system",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "paintjob": "./bin/paintjob.js"
   },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Rrahul7/PaintJob.git",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "design-system",
+    "cli",
+    "paintjob",
+    "theme",
+    "generator"
+  ],
+  "author": "Rahul Dubey <rrahuldubey07@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "lint": "eslint src --ext .ts"
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@paintjob/tokens": "*",
+    "@paintjob/tokens": "^0.1.0",
     "commander": "^11.1.0",
     "chalk": "^4.1.2"
   },

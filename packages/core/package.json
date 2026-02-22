@@ -1,16 +1,39 @@
 {
   "name": "@paintjob/core",
   "version": "0.1.0",
+  "description": "Theme engine, provider, and hooks for PaintJob design system",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Rrahul7/PaintJob.git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "design-system",
+    "theme",
+    "react",
+    "styled-components",
+    "paintjob"
+  ],
+  "author": "Rahul Dubey <rrahuldubey07@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@paintjob/tokens": "*",
+    "@paintjob/tokens": "^0.1.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -21,7 +44,8 @@
     "typescript": "^5.3.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "styled-components": "^6.0.0"
   }
 }
 
