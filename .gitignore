@@ -43,3 +43,6 @@ yarn-error.log*
 # Storybook
 storybook-static/
 
+#augment
+.augment/
+
